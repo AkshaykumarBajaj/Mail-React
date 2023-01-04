@@ -1,0 +1,14 @@
+[
+	{
+		"mId": "guid-9",
+		"unread": true,
+		"subject" : "Welcome to XYZ bank | Offers for you",
+		"content" : "Congratulations ! <u>Credit card<u> is being shipped to you today!"
+	},
+	{
+		"mId": "guid-12",
+		"unread": true,
+		"subject" : "Referal Alert",
+		"content" : "You can refer candidates for the openings of Sales Manager"
+	}
+]

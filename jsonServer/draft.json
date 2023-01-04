@@ -1,0 +1,12 @@
+[
+	{
+		"mId": "guid-6",
+		"subject" : "Leave Request",
+		"content" : "Hi, I request you to grant me a leave of 5 days from January 12, 2023 to January"
+	},
+	{
+		"mId": "guid-7",
+		"subject" : "Worklog",
+		"content" : "Hi, PFB my worklog for today:"
+	}
+]
