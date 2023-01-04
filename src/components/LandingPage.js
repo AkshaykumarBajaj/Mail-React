@@ -81,7 +81,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     }),
 );
 
-export default function LandingPage() {
+export default function LandingPage({mailsData}) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -122,7 +122,7 @@ export default function LandingPage() {
                     </IconButton>
                 </DrawerHeader>
                 <Divider />
-                <FoldersList open={open} />
+                <FoldersList open={open} mailsData = {mailsData}/>
             </Drawer>
             <Box>
                 <DrawerHeader />

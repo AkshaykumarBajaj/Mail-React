@@ -4,39 +4,13 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import DeleteIcon from '@mui/icons-material/Delete';
-import BlockIcon from '@mui/icons-material/Block';
 
-function FoldersList({ open }) {
 
-  let folders = [
-    {
-      name: "Inbox",
-      icon: <InboxIcon />,
-      filename: "inbox.json"
-    },
-    {
-      name: "Drafts",
-      icon: <DraftsIcon />,
-      filename: "drafts.json"
-    },
-    {
-      name: "Junk Mail",
-      icon: <BlockIcon />,
-      filename: "spam.json"
-    },
-    {
-      name: "Deleted Items",
-      icon: <DeleteIcon />,
-      filename: "deleted.json"
-    },
-  ]
+function FoldersList({ open, mailsData }) {
   return (
     <>
       <List>
-        {folders.map((folder, index) => (
+        {mailsData.map((folder, index) => (
           <ListItem key={folder.name} disablePadding sx={{ display: 'block' }}>
             <ListItemButton
               sx={{
@@ -55,6 +29,7 @@ function FoldersList({ open }) {
                 {folder.icon}
               </ListItemIcon>
               <ListItemText primary={folder.name} sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary={folder.unreadCount} primaryTypographyProps={{ padding: "10px" }} sx={{ background: 'rgba(0,0,0,.10)', borderRadius: 100, margin: "5px" }} />
             </ListItemButton>
           </ListItem>
         ))}
